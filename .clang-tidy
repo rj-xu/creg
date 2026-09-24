@@ -1,0 +1,34 @@
+---
+Checks: >
+  clang-diagnostic-*,
+  clang-analyzer-*,
+  -clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling,
+  -clang-analyzer-unix.cstring.NullArg,
+  bugprone-*,
+  -bugprone-easily-swappable-parameters,
+  cppcoreguidelines-*,
+  -cppcoreguidelines-avoid-c-arrays,
+  -cppcoreguidelines-avoid-magic-numbers,
+  -cppcoreguidelines-avoid-non-const-global-variables,
+  -cppcoreguidelines-macro-to-enum,
+  -cppcoreguidelines-macro-usage,
+  google-*,
+  -google-readability-todo,
+  misc-*,
+  -misc-include-cleaner,
+  performance-*,
+  -performance-no-int-to-ptr,
+  portability-*,
+  readability-*,
+  -readability-function-cognitive-complexity,
+  -readability-identifier-length,
+  -readability-magic-numbers,
+CheckOptions:
+  # - key: readability-identifier-naming.FunctionCase
+  #   value: lower_case
+  - key: readability-identifier-naming.MacroDefinitionCase
+    value: UPPER_CASE
+  - key: readability-inconsistent-declaration-parameter-name.Strict
+    value: true
+  - key: readability-maximum-consecutive-empty-lines.MaxEmptyLines
+    value: 1

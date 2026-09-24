@@ -1,0 +1,8 @@
+target("omx148b.bin")
+    set_kind("binary")
+    set_toolchains("clang")
+    set_plat("arm-v7m-none-eabi")
+    set_arch("cortex-m4")
+    add_links("c")
+    add_includedirs("core/omx148b", "src")
+    add_files("src/**.c")
